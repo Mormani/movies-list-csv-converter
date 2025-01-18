@@ -3,12 +3,13 @@ This is a simple NodeJS application that parses a CSV file of Movies, Series and
 
 - [Websites supported](#websites-supported)
 - [How to use](#how-to-use)
-  - [Parameters](#parameters)
+    - [Parameters](#parameters)
       - [`--exported` (required)](#--exported-required)
       - [`--to-import` (optional)](#--to-import-optional)
       - [`--watched` or `--no-watched` (optional)](#--watched-or---no-watched-optional)
       - [`--favorites` or `--no-favorites` (optional)](#--favorites-or---no-favorites-optional)
       - [`--after-date` (optional)](#--after-date-optional)
+  - [Concerns](#concerns)
 
 
 ## Websites supported
@@ -69,4 +70,3 @@ Filter only items after a specific date, must be in ISO format.
 - Some data might be missing important informations to identify the media, so you can use [`TMDB.findInfos`](./src/types/TMDB.js#L29) to find the media by type, name and year, after that is returned `originalTitle`, `ids.TMDB` and `ids.IMDB`.
 - Dates range in Notion are split by an arrow and spaces (` → `), so you can use [`Notion.normalizeDate`](./src/types/Notion.js#82) to get only one date.
 - Most of websites rate the media from 0 to 10, don't forget to convert if needed.
-- 
