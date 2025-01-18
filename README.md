@@ -66,7 +66,7 @@ Default: `""` (empty string).
 Filter only items after a specific date, must be in ISO format.
 
 ### Concerns
-- Since Notion uses a custom database, you need to replace the map values at [`Notion.headers.exported`](./src/types/Notion.js#L9) to match the columns of your database.
+- Since Notion uses a custom database, you need to replace the map values at [`Notion.Parser.headers.exported`](./src/types/Notion.js#L9) to match the columns of your database.
 - Some data might be missing important informations to identify the media, so you can use [`TMDB.findInfos`](./src/types/TMDB.js#L45) to find the media by type, name and year, after that is returned `originalTitle`, `ids.TMDB` and `ids.IMDB`.
-- Dates range in Notion are split by an arrow and spaces (` → `), so you can use [`Notion.normalizeDate`](./src/types/Notion.js#L82) to get only one date.
+- Dates range in Notion are split by an arrow and spaces (` → `), so you can use [`Notion.Parser.normalizeDate`](./src/types/Notion.js#L82) to get only one date.
 - Most of websites rate the media from 0 to 10, don't forget to convert if needed.
