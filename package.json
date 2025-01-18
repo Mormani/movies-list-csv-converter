@@ -1,0 +1,13 @@
+{
+  "name": "movies-list-csv-converter",
+  "version": "1.0.0",
+  "description": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv": "^6.3.11",
+    "dotenv": "^16.4.7"
+  }
+}
