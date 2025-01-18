@@ -19,9 +19,9 @@ This is a simple NodeJS application that parses a CSV file of Movies, Series and
     - [ ] IMDB
     - [ ] TMDB
     - [ ] Trakt (exported using [Trakt.tv backup](https://darekkay.com/blog/trakt-tv-backup/) from Darek Kay)
-    - [x] [Custom Notion Database](./src/types/Notion.js#L19)
+    - [x] [Custom Notion Database](./src/types/Notion.js#L21)
 - Implemented converters to import files
-    - [x] [IMDB](./src/types/IMDB.js#L8)
+    - [x] [IMDB](./src/types/IMDB.js#L9)
     - [ ] Trakt
 
 ## How to use
@@ -66,7 +66,7 @@ Default: `""` (empty string).
 Filter only items after a specific date, must be in ISO format.
 
 ### Concerns
-- Since Notion uses a custom database, you need to replace the map values at [`Notion.headers.exported`](./src/types/Notion.js#L6) to match the columns of your database.
-- Some data might be missing important informations to identify the media, so you can use [`TMDB.findInfos`](./src/types/TMDB.js#L29) to find the media by type, name and year, after that is returned `originalTitle`, `ids.TMDB` and `ids.IMDB`.
-- Dates range in Notion are split by an arrow and spaces (` → `), so you can use [`Notion.normalizeDate`](./src/types/Notion.js#82) to get only one date.
+- Since Notion uses a custom database, you need to replace the map values at [`Notion.headers.exported`](./src/types/Notion.js#L9) to match the columns of your database.
+- Some data might be missing important informations to identify the media, so you can use [`TMDB.findInfos`](./src/types/TMDB.js#L45) to find the media by type, name and year, after that is returned `originalTitle`, `ids.TMDB` and `ids.IMDB`.
+- Dates range in Notion are split by an arrow and spaces (` → `), so you can use [`Notion.normalizeDate`](./src/types/Notion.js#L82) to get only one date.
 - Most of websites rate the media from 0 to 10, don't forget to convert if needed.
